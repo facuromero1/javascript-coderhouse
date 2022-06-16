@@ -26,7 +26,7 @@ producRouter.get('/api/products/:id',(req,res) =>{
 producRouter.post('/api/products',(req,res) =>{
     const Newproduct = req.body
     Newproduct.id = products.length + 1
-    Newproduct.push(products)
+    products.push(Newproduct)
 
     return res.status(201).json(Newproduct)
     
