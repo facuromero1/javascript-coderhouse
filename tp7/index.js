@@ -1,8 +1,8 @@
 const express = require('express')
-const {productsRouter, cartRouter} = require('./Routers/routers')
+const {productsRouter, cartRouter} = require('./routers')
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

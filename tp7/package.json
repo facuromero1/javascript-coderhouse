@@ -1,0 +1,14 @@
+{
+  "name": "tp7",
+  "version": "1.0.0",
+  "description": "'tp entregable numero7'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

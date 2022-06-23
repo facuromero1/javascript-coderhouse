@@ -1,12 +1,12 @@
 const express = require('express');
-const Storage = require('/Users/facu/Documents/coderHouse/TPs/javascript-coderhouse/tp7/storage');
+const Storage = require('./storage.js');
 
 const { Router } = express;
 
 const productsRouter = Router();
 const cartRouter = Router();
 
-const storage = new Storage();
+const container = new Storage();
 
 const admin = true;
 const checkAdmin = (req, res, next) => {
@@ -18,50 +18,53 @@ const checkAdmin = (req, res, next) => {
         });
 };
 
+productsRouter.get('/api/products',async (req,res) => {
+    return res.json(await container.getProducts())
+})
+
 productsRouter.get('/:id?',async (req,res)=>{
-    if(req.params.id){
-        return res.json(await storage.getProductById(req.params.id));
-    }else
-    return console.error("404 item not found")
+    let productId = req.params.id
+    return res.json(container.getProductById(productId));
+    
 });
 
 productsRouter.post("/",checkAdmin,async(req,res)=>{
-    await storage.createProduct(req.body);
+    await container.createProduct(req.body);
     return res.sendStatus(201)
 });
 
 productsRouter.put("/:id",checkAdmin,async(req,res)=>{
-    await storage.updateProduct(req.params.id, req.body)
+    await container.updateProduct(req.params.id, req.body)
     return res.sendStatus(204)
 });
 
 productsRouter.delete("/:id",checkAdmin,async(req,res)=>{
-    await storage.deleteProduct(req.params.id)
+    await container.deleteProduct(req.params.id)
     return res.sendStatus(204)
 });
 
 cartRouter.post("/",async (req,res) =>{
-    const newCartId = await storage.createCart(req.params.id);
+    const newCartId = await container.createCart();
     res.json(newCartId);
 });
 
 cartRouter.delete("/:id",async (req,res)=>{
-    await storage.deleteCart(req.params.id)
+    await container.deleteCart(req.params.id)
     res.sendStatus(201)
 });
 
 cartRouter.get("/:id/products",async(req,res)=>{
-    const products = await storage.getCartsProducts(req.params.id);
+    const products = await container.getCartsProducts(req.params.id);
     return res.json(products);
 });
 
 cartRouter.delete("/:id/products/:prodId",async(req,res)=>{
-    await storage.deleteCartProducts(req.params.id,req.params.prodId)
+    await container.deleteCartProducts(req.params.id,req.params.prodId)
     return sendStatus(204)
 });
 
 cartRouter.post("/:id/products",async(req,res)=>{
-    await storage.addCartProduct(req.params.id, req.body.id);
+    await container.addCartProduct(req.params.id, req.body.id);
     return res.sendStatus(204)
 
 });
