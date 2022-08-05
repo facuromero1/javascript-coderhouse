@@ -23,7 +23,7 @@ const PORT = 8080;
 
 app.use(session({
     store: MongoStore.create({
-        mongoUrl: 'mongodb+srv://facundoRomero:mRmMdUJaoI5Y3P3O@cluster0.20rnche.mongodb.net/ecommerce?retryWrites=true&w=majority',
+        mongoUrl: 'mongodb+srv://facundo:qwerty123@cluster0.i0jqdgz.mongodb.net/?retryWrites=true&w=majority',
         ttl: 60
     }),
     secret: 'qwerty',
