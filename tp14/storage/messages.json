@@ -1,0 +1,41 @@
+{
+  "id": 1,
+  "messages": [
+    {
+      "text": "buenas tardes!",
+      "author": {
+        "id": "facac@gmail.com",
+        "name": "facundo",
+        "lastname": "romero",
+        "age": "25",
+        "alias": "facu romero",
+        "avatar": "www.urlavatar.com"
+      },
+      "time": "12/6/2022 19:53:27"
+    },
+    {
+      "text": "como estan todos?",
+      "author": {
+        "id": "julianlop@gmail.com",
+        "name": "julian",
+        "lastname": "scala",
+        "age": "33",
+        "alias": "juli",
+        "avatar": "url"
+      },
+      "time": "12/6/2022 20:37:54"
+    },
+    {
+      "text": "como andan?",
+      "author": {
+        "id": "facuromero5554@gmail.com",
+        "name": "Facundo",
+        "lastname": "Romero",
+        "age": "27",
+        "alias": "facu",
+        "avatar": "www.avatar.com"
+      },
+      "time": "26/7/2022 17:48:13"
+    }
+  ]
+}
