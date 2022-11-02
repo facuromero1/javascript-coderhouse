@@ -1,0 +1,207 @@
+Statistical profiling result from console-v8.log, (16060 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  15546   96.8%          C:\WINDOWS\SYSTEM32\ntdll.dll
+    480    3.0%          C:\Program Files\nodejs\node.exe
+      3    0.0%          C:\WINDOWS\System32\KERNELBASE.dll
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      7    0.0%   22.6%  LazyCompile: *resolve node:path:158:10
+      2    0.0%    6.5%  LazyCompile: *wrap C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\code-gen.js:101:22
+      2    0.0%    6.5%  LazyCompile: *parse C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:269:30
+      1    0.0%    3.2%  RegExp: ^\/info\/?$
+      1    0.0%    3.2%  RegExp: ^(?:\}(~)?\}\})
+      1    0.0%    3.2%  RegExp: ^(?:\{\{(~)?\s*else\b)
+      1    0.0%    3.2%  RegExp: [ \t]+$
+      1    0.0%    3.2%  LazyCompile: *step C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\express-handlebars\dist\express-handlebars.js:31:18
+      1    0.0%    3.2%  LazyCompile: *readFileSync node:fs:455:22
+      1    0.0%    3.2%  LazyCompile: *preparePath C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\helpers.js:63:21
+      1    0.0%    3.2%  LazyCompile: *next C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\express\lib\router\index.js:177:16
+      1    0.0%    3.2%  LazyCompile: *formatWithOptionsInternal node:internal/util/inspect:2173:35
+      1    0.0%    3.2%  LazyCompile: *dirname node:path:653:10
+      1    0.0%    3.2%  LazyCompile: *compile C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:73:28
+      1    0.0%    3.2%  LazyCompile: *__generator C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\express-handlebars\dist\express-handlebars.js:27:58
+      1    0.0%    3.2%  LazyCompile: *SourceNode_walk C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\source-map\lib\source-node.js:221:53
+      1    0.0%    3.2%  Function: ^wrapmethods C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\express-session\index.js:394:25
+      1    0.0%    3.2%  Function: ^wrapHelper C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:6:20
+      1    0.0%    3.2%  Function: ^readFile C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\graceful-fs\graceful-fs.js:111:21
+      1    0.0%    3.2%  Function: ^formatWithOptionsInternal node:internal/util/inspect:2173:35
+      1    0.0%    3.2%  Function: ^ServerDescription C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\mongoose\node_modules\mongodb\lib\sdam\server_description.js:34:16
+      1    0.0%    3.2%  Function: ^Glob C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\glob\glob.js:117:15
+      1    0.0%    3.2%  Function: ^<anonymous> C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\express\lib\request.js:467:36
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+     31    0.2%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+     30    0.2%   96.8%  GC
+  16029   99.8%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  15546   96.8%  C:\WINDOWS\SYSTEM32\ntdll.dll
+
+    480    3.0%  C:\Program Files\nodejs\node.exe
+    282   58.8%    C:\Program Files\nodejs\node.exe
+     60   21.3%      Function: ^compileFunction node:vm:316:25
+     59   98.3%        Function: ^wrapSafe node:internal/modules/cjs/loader:1069:18
+     59  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+     58   98.3%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1    1.7%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1    1.7%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1069:18
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1164:37
+     25    8.9%      Function: ^handleWriteReq node:internal/stream_base_commons:45:24
+     25  100.0%        Function: ^writeGeneric node:internal/stream_base_commons:147:22
+     25  100.0%          Function: ^Socket._writeGeneric node:net:879:42
+     25  100.0%            Function: ^Socket._write node:net:916:35
+     14    5.0%      C:\Program Files\nodejs\node.exe
+      2   14.3%        Function: ^fromString C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\mongoose\node_modules\mongodb\lib\utils.js:370:22
+      2  100.0%          Function: ^ns C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\mongoose\node_modules\mongodb\lib\utils.js:348:12
+      2  100.0%            Function: ^measureRoundTripTime C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\mongoose\node_modules\mongodb\lib\sdam\monitor.js:287:30
+      1    7.1%        LazyCompile: ~p C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\@faker-js\faker\dist\cjs\locales\fa\vehicle\index.js:1:259
+      1  100.0%          LazyCompile: ~m C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\@faker-js\faker\dist\cjs\locales\fa\vehicle\index.js:1:432
+      1  100.0%            Function: ~<anonymous> C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\@faker-js\faker\dist\cjs\locales\fa\vehicle\index.js:1:1
+      1    7.1%        LazyCompile: ~get C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\@faker-js\faker\dist\cjs\locales\en_AU_ocker\address\index.js:1:368
+      1  100.0%          Function: ~<anonymous> C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\@faker-js\faker\dist\cjs\locales\en_AU_ocker\address\index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1    7.1%        LazyCompile: *strEscape node:internal/util/inspect:496:19
+      1  100.0%          Function: ^<anonymous> node:internal/util/inspect:1631:11
+      1  100.0%            C:\Program Files\nodejs\node.exe
+      1    7.1%        LazyCompile: *setupParams C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:1034:36
+      1  100.0%          LazyCompile: *setupHelper C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:1020:36
+      1  100.0%            Function: ^invokeAmbiguous C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:699:44
+      1    7.1%        LazyCompile: *quotedString C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\code-gen.js:118:38
+      1  100.0%          Function: ^pushSource C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:881:34
+      1  100.0%            Function: ^append C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:394:26
+      1    7.1%        LazyCompile: *formatWithOptionsInternal node:internal/util/inspect:2173:35
+      1  100.0%          Function: ^formatWithOptions node:internal/util/inspect:2152:27
+      1  100.0%            Function: ^value node:internal/console/constructor:336:20
+      1    7.1%        LazyCompile: *Module._load node:internal/modules/cjs/loader:800:24
+      1  100.0%          LazyCompile: *Module.require node:internal/modules/cjs/loader:1049:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:102:31
+      1    7.1%        Function: ^stat node:internal/modules/cjs/loader:157:14
+      1  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:534:28
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:894:35
+      1    7.1%        Function: ^escapeExpression C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\utils.js:77:26
+      1  100.0%          Function: ^<anonymous> :1:20
+      1  100.0%            LazyCompile: *<anonymous> C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\helpers\each.js:78:49
+      1    7.1%        Function: ^Module._findPath node:internal/modules/cjs/loader:534:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:894:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:800:24
+      1    7.1%        Function: ^Glob._processReaddir2 C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\glob\glob.js:375:44
+      1  100.0%          Function: ^<anonymous> C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\glob\glob.js:370:43
+      1  100.0%            Function: ^RES C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\inflight\inflight.js:18:28
+      1    7.1%        Function: ^FastBuffer node:internal/buffer:958:14
+      1  100.0%          Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      1  100.0%            Function: ^createPool node:buffer:155:20
+     11    3.9%      Function: ^stat node:internal/modules/cjs/loader:157:14
+      6   54.5%        Function: ^Module._findPath node:internal/modules/cjs/loader:534:28
+      6  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:894:35
+      6  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:800:24
+      5   45.5%        Function: ^tryFile node:internal/modules/cjs/loader:424:17
+      5  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:440:23
+      4   80.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:534:28
+      1   20.0%            Function: ^tryPackage node:internal/modules/cjs/loader:378:20
+     10    3.5%      Function: ^closeSync node:fs:531:19
+     10  100.0%        Function: ^closeSync C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\graceful-fs\graceful-fs.js:72:24
+      7   70.0%          Function: ^readFileSync node:fs:455:22
+      7  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      3   30.0%          LazyCompile: *readFileSync node:fs:455:22
+      3  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      8    2.8%      Function: ^openSync node:fs:581:18
+      8  100.0%        Function: ^readFileSync node:fs:455:22
+      8  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      7   87.5%            Function: ^Module.load node:internal/modules/cjs/loader:1021:33
+      1   12.5%            LazyCompile: *Module._load node:internal/modules/cjs/loader:800:24
+      7    2.5%      Function: ^readSync node:fs:695:18
+      4   57.1%        LazyCompile: *readFileSync node:fs:455:22
+      4  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      4  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:800:24
+      3   42.9%        Function: ^tryReadSync node:fs:434:21
+      3  100.0%          Function: ^readFileSync node:fs:455:22
+      3  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      6    2.1%      Function: ^statSync node:fs:1575:18
+      5   83.3%        Function: ^tryStat C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\express\lib\view.js:174:17
+      5  100.0%          Function: ^resolve C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\express\lib\view.js:146:42
+      5  100.0%            Function: ^lookup C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\express\lib\view.js:104:40
+      1   16.7%        LazyCompile: ~tryStat C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\express\lib\view.js:174:17
+      1  100.0%          LazyCompile: ~resolve C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\express\lib\view.js:146:42
+      1  100.0%            LazyCompile: ~lookup C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\express\lib\view.js:104:40
+      5    1.8%      Function: ^writevGeneric node:internal/stream_base_commons:122:23
+      5  100.0%        Function: ^Socket._writeGeneric node:net:879:42
+      5  100.0%          Function: ^Socket._writev node:net:911:36
+      5  100.0%            Function: ^doWrite node:internal/streams/writable:400:17
+      5    1.8%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3   60.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1   33.3%          Function: ~<anonymous> node:tls:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1   33.3%          Function: ~<anonymous> node:crypto:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1   33.3%          Function: ~<anonymous> node:cluster:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1   20.0%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1  100.0%          LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:45:26
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:800:24
+      1   20.0%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:45:26
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:800:24
+      4    1.4%      Function: ^stat node:fs:1500:14
+      4  100.0%        Function: ^sendFile C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\send\index.js:712:51
+      4  100.0%          Function: ^pipe C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\send\index.js:506:43
+      4  100.0%            Function: ^serveStatic C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\serve-static\index.js:72:31
+      3    1.1%      LazyCompile: *wrap C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\code-gen.js:101:22
+      1   33.3%        LazyCompile: *push C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:868:22
+      1  100.0%          Function: ^invokeAmbiguous C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:699:44
+      1  100.0%            Function: ^compile C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:73:28
+      1   33.3%        LazyCompile: *invokeAmbiguous C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:699:44
+      1  100.0%          LazyCompile: *compile C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: *<anonymous> C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\express-handlebars\dist\express-handlebars.js:227:47
+      1   33.3%        LazyCompile: *generateList C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\code-gen.js:143:38
+      1  100.0%          LazyCompile: *setupHelper C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:1020:36
+      1  100.0%            Function: ^invokeKnownHelper C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:682:48
+      3    1.1%      LazyCompile: *nextTick node:internal/process/task_queues:104:18
+      2   66.7%        Function: ^write_ node:_http_outgoing:831:16
+      2  100.0%          Function: ^write node:_http_outgoing:802:49
+      2  100.0%            Function: ^write C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\compression\index.js:78:32
+      1   33.3%        Function: ^emitReadable node:internal/streams/readable:563:22
+      1  100.0%          Function: ^onEofChunk node:internal/streams/readable:533:20
+      1  100.0%            Function: ^readableAddChunk node:internal/streams/readable:236:26
+      3    1.1%      LazyCompile: *next C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:478:32
+      3  100.0%        LazyCompile: *parse C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:269:30
+      3  100.0%          Function: ^parseWithoutProcessing C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\base.js:33:32
+      2   66.7%            Function: ^parse C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\handlebars\dist\cjs\handlebars\compiler\base.js:51:15
+      1   33.3%            LazyCompile: *<anonymous> C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\express-handlebars\dist\express-handlebars.js:227:47
+      3    1.1%      Function: ^slice node:buffer:599:12
+      3  100.0%        Function: ^toString node:buffer:790:46
+      2   66.7%          Function: ^deserializeObject C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\bson\lib\parser\deserializer.js:65:27
+      2  100.0%            Function: ^deserializeObject C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\bson\lib\parser\deserializer.js:65:27
+      1   33.3%          Function: ^readFileSync node:fs:455:22
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      3    1.1%      Function: ^setWriteHeadHeaders C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\on-headers\index.js:105:30
+      3  100.0%        Function: ^writeHead C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\on-headers\index.js:28:29
+      2   66.7%          Function: ^_implicitHeader node:_http_server:304:68
+      2  100.0%            Function: ^writetop C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\express-session\index.js:270:24
+      1   33.3%          Function: ^writeHead C:\Users\facu\documents\coderhouse\tps\javascript-coderhouse\tp16\node_modules\on-headers\index.js:28:29
+      1  100.0%            Function: ^_implicitHeader node:_http_server:304:68
+     28    5.8%    LazyCompile: *compileFunction node:vm:316:25
+     28  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1069:18
+     24   85.7%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1109:37
+     24  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+     24  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:800:24
+      4   14.3%        Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      4  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      4  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:800:24
+

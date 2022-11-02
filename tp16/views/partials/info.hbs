@@ -1,0 +1,15 @@
+{{#if data}}
+    <table class="table">
+        
+        <tbody>
+            {{#each data}}
+                <tr>
+                    <th scope="row">{{@key}}</th>
+
+                    <td>{{this}}</td>
+
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{/if}}
